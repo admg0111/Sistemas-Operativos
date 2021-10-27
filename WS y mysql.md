@@ -1,7 +1,7 @@
 # Acceder remotamente a una base de datos a través del WS para comprobar la integridad de algún programa del dominio
--Conexión remota a mysql desde Windows Server
--Inserts remoto a una base de datos
--Ejecutar scripts en equipos del dominio desde el server (Invoke-Command)
+- Conexión remota a mysql desde Windows Server
+- Inserts remoto a una base de datos
+- Ejecutar scripts en equipos del dominio desde el server (Invoke-Command)
 ---------------------------
 
 ## Abrir una conexión entre el server y la base de datos
