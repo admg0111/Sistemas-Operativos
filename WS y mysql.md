@@ -1,5 +1,4 @@
 # Acceder remotamente a una base de datos a través del WS para comprobar la integridad de algún programa del dominio
-------------------------------------------
 
 ## Abrir una conexión entre el server y la base de datos
 ```powershell
@@ -8,7 +7,7 @@ $Connection = ([MySql.Data.MySqlClient.MySqlConnection]::new("server=" + "localh
 $Connection.Open()
 ```
 
-## Insertar en la base de datos los HASH que deben tener los programas
+## Insertar en la base de datos los HASH que deben tener los programas (Ej. HASHES del WS)
 ```powershell
 $HashModelo = (Get-FileHash C:\Windows\system32\calc.exe).HASH
 $Programa = "calc.exe"
@@ -22,3 +21,28 @@ $DataSet.Tables[0]
 
 $Connection.Close()
 ```
+## Comprobar que hemos insertado correctamente los hashes en la base de dates mediante una QUERY
+```powershell
+$Query = 'select * from LosHashes;'
+$Command = [MySql.Data.MySqlClient.MySqlCommand]::new($Query, $Connection)
+$DataAdapter = [MySql.Data.MySqlClient.MySqlDataAdapter]::new($Command)
+$DataSet = [System.Data.DataSet]::new()
+$DataAdapter.Fill($DataSet)
+$DataSet.Tables
+```
+## Obtener los datos de integridad de los programas de un equipo del dominio y comprobar su hash con el almacenado en la base de datos
+```powershell
+$HashSospechoso = Invoke-Command -ScriptBlock { (Get-FileHash C:\Windows\system32\calc.exe).HASH } -ComputerName "DESKTOP-XXXXXXX"
+```
+```powershell
+if (($DataSet.Tables).hash -eq $HashSospechoso ) 
+{
+    "El Hash es correcto"
+} else
+{
+    "El Hash no es correcto"
+}
+```
+
+
+
