@@ -1,5 +1,5 @@
 # Acceder remotamente a una base de datos a través del WS para comprobar la integridad de algún programa del dominio
-
+#
 
 
 ## Abrir una conexión entre el server y la base de datos
