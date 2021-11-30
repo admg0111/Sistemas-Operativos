@@ -1,0 +1,11 @@
+# Configuración automatizada desde powershell del directorio activo de un Instituto
+- Guardar en ficheros los usuarios para crearlos
+- Crear las unidades organizativas correspondientes para cada clase, curso, ciclo, etc.
+- Crear los usuarios con una contraseña global 
+- Filtrar a los profesores para meterlos en un grupo diferente
+- Añadir los usuarios a sus OU correspondientes
+- Crear un grupo para cada clase 
+- Añadir a los alumnos y profesores a sus grupos de clase correpondientes
+- Crear una carpeta compartida para cada clase y determinar sus permisos
+- Redireccionar el escritorio de los usuarios a la carpeta del servidor
+- Denegar mediante GPO el uso del cmd a los alumnos de la ESO
