@@ -14,3 +14,4 @@ La redirección de puertos, a veces llamado tunelado de puertos, es la acción d
 ## Configuración de puertos en VMware Workstation 16
 
 Edit >>  VirtualNetwork editor >> Change Settings >> Elegir el adaptador NAT >> NAT Settings... >> Add >> Host Port: 8080 // Type: TCP // Virtual Machine IP address: (IP del ubuntu) // Virtual Machine Port: 80
+![Captura](https://user-images.githubusercontent.com/75449797/144110242-2d638850-a98e-4da0-a94b-b86de5d56969.PNG)
