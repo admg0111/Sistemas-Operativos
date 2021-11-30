@@ -10,3 +10,7 @@ La redirección de puertos, a veces llamado tunelado de puertos, es la acción d
 
 ## Instalar y configurar nuestro servidor Apache en un Ubuntu-Server
 * https://www.digitalocean.com/community/tutorials/como-instalar-el-servidor-web-apache-en-ubuntu-18-04-es
+
+## Configuración de puertos en VMware Workstation 16
+
+Edit >>  VirtualNetwork editor >> Change Settings >> Elegir el adaptador NAT >> NAT Settings... >> Add >> Host Port: 8080 // Type: TCP // Virtual Machine IP address: (IP del ubuntu) // Virtual Machine Port: 80
