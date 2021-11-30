@@ -6,7 +6,7 @@ La redirección de puertos, a veces llamado tunelado de puertos, es la acción d
 ## Realizar una conexión entre mi máquina (localhost) y un servidor Apache
 - Acceder al servidor a través del puerto 8080 en lugar del 80 (reservado para xampp)
 - Entrar a la maquina virtual del apache a través del puerto virtual 80
-------------------------------
+
 
 ## Instalar y configurar nuestro servidor Apache en un Ubuntu-Server
 * https://www.digitalocean.com/community/tutorials/como-instalar-el-servidor-web-apache-en-ubuntu-18-04-es
