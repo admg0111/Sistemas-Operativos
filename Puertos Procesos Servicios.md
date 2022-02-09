@@ -41,4 +41,4 @@ $servids= foreach ($servid in $serv.processID){$servid}
 #Detener Servicio
 Stop-Service (($serv | where processID -eq $id).name)
 
-´´´
+```
