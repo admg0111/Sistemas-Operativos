@@ -1,4 +1,4 @@
-# Advertir con un mensaje de cuando quede poco espacio
+# Advertir con un mensaje cuando quede poco espacio
 
 ```powershell
 ### Advertencia Poco Espacio
@@ -25,4 +25,17 @@ function mensaje($mensajito)
     $balloon.Visible  = $true
     $balloon.ShowBalloonTip(5000)
 }
+```
+
+# Ver el espacio del que disponemos en un disco
+
+```powershell
+### ¿Cuanto espacio disponile tengo en un disco?
+
+$disco = (Get-WMIObject  -Class Win32_LogicalDisk | where deviceid -eq f:)
+
+$espacio= $disco.FreeSpace/1mb
+$letra=$disco.DeviceID
+
+write-host "Quedan $espacio mb en la unidad $letra"
 ```
