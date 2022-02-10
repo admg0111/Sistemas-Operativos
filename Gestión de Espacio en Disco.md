@@ -27,6 +27,8 @@ function mensaje($mensajito)
 }
 ```
 
+-------------------------------------
+
 # Ver el espacio del que disponemos en un disco
 
 ```powershell
