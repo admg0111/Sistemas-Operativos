@@ -28,6 +28,8 @@ try
   #Configuracion del cliente (emisor) del servidor de correo (gmail en este caso)
   $SMTPCliente = New-Object Net.Mail.SmtpClient($SMTPServidor, 587)
   $SMTPCliente.EnableSsl = $true
+  
+  #Pedir las credenciales del emisor y enviar el correo
   $SMTPCliente.Credentials = New-Object System.Net.NetworkCredential($creDenciAles.UserName, $creDenciAles.Password);
   $SMTPCliente.Send($SMTPMensaje)
   
