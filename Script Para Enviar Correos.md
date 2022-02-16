@@ -10,7 +10,7 @@ $creDenciAles= Get-Credential
 
 try
 {
-  #Definir los objetos del correo
+  #Definir los objetos del mail según el servidor de correo
   $SMTPMensaje = New-Object System.Net.Mail.MailMessage($Emisor, $Destinatario, $Asunto, $CuerpoEnHTML)
   $SMTPAdjunto = New-Object System.Net.Mail.Attachment($RutaNombreFicheroAdjunto)
   $SMTPMensaje.Attachments.Add($SMTPAdjunto)
