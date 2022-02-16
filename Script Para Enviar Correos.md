@@ -1,3 +1,6 @@
+# Enviar un correo Gmail desde powershell
+
+
 ```powershell
 $Destinatario = "ElDestinatario@gmail.com"
 $Emisor = "TuCorreo@gmail.com"
